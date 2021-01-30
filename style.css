@@ -1,0 +1,120 @@
+/* ------ CSS3 - Text Distortion Effects ------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #e5e2db;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23b0ada1' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+h1 {
+    font-family: 'Montserrat Subrayada', sans-serif; /* font-family: 'Vast Shadow', cursive; | font-family: 'Shadows Into Light', cursive; | font-family: 'Montserrat Subrayada', sans-serif;  */
+    font-size: 3.5em;
+    text-align: center;
+    margin-top: 50px;
+    color: #4287f5;
+    text-shadow: 1px 2px 1px rgba(37, 76, 138, 1);
+}
+.container {
+    width: 260px;
+    margin: 100px auto;
+}
+p {
+    font-family: Montserrat;
+    font-size: 2.5em;
+    text-align: center;
+    color: #4287f5;
+    text-shadow: 1px 2px 1px rgba(37, 76, 138, 1);
+    margin-bottom: 70px;
+}
+section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+button {
+    position: relative;
+    width: 240px;
+    height: 150px;
+    font-size: 80px;
+    border: none;
+    outline: none;
+    background: none;
+    font-weight: 900;
+}
+.section_1 button {
+    color: rgba(158, 147, 120, 1);
+    transition: .1s;
+    text-shadow: 1px -1px 0 rgba(158, 147, 120,1),
+                -1px 1px 0 rgba(158, 147, 120,1),
+                -1px -1px 0 rgba(158, 147, 120,1),
+                1px 1px 0 rgba(158, 147, 120,1);
+}
+.section_1 button:hover {
+    color: #e5e2db;
+    transition: .8s ease-out;
+    text-shadow: 1px -1px 0 rgba(158, 147, 120,1),
+                -1px 1px 0 rgba(158, 147, 120,1),
+                -1px -1px 0 rgba(158, 147, 120,1),
+                1px 1px 0 rgba(158, 147, 120,1),
+                0px 1px 0 rgba(158, 147, 120,1),
+                0px 2px 0 rgba(158, 147, 120,.95),
+                0px 3px 0 rgba(158, 147, 120,.90),
+                0px 4px 0 rgba(158, 147, 120,.85),
+                0px 5px 0 rgba(158, 147, 120,.80),
+                0px 6px 0 rgba(158, 147, 120,.75),
+                0px 7px 0 rgba(158, 147, 120,.72),
+                0px 8px 0 rgba(158, 147, 120,.70),
+                0px 9px 0 rgba(158, 147, 120,.68),
+                0px 10px 0 rgba(158, 147, 120,.66),
+                0px 11px 0 rgba(158, 147, 120,.64),
+                0px 12px 0 rgba(158, 147, 120,.62),
+                0px 13px 0 rgba(158, 147, 120,.60),
+                0px 14px 0 rgba(158, 147, 120,.58),
+                0px 15px 0 rgba(158, 147, 120,.56),
+                0px 16px 0 rgba(158, 147, 120,.54),
+                0px 17px 0 rgba(158, 147, 120,.52),
+                0px 18px 0 rgba(158, 147, 120,.50),
+                0px 19px 0 rgba(158, 147, 120,.48),
+                0px 20px 0 rgba(158, 147, 120,.46),
+                0px 21px 0 rgba(158, 147, 120,.42),
+                0px 22px 0 rgba(158, 147, 120,.40),
+                0px 23px 0 rgba(158, 147, 120,.38),
+                0px 24px 0 rgba(158, 147, 120,.36),
+                0px 25px 0 rgba(158, 147, 120,.34),
+                0px 26px 0 rgba(158, 147, 120,.32),
+                0px 27px 0 rgba(158, 147, 120,.30),
+                0px 28px 0 rgba(158, 147, 120,.25),
+                0px 29px 0 rgba(158, 147, 120,.20),
+                0px 30px 0 rgba(158, 147, 120,.10);
+}
+.section_2 button {
+    color: #ebb028;
+    transition: .5s;
+    -webkit-text-stroke: 1px black;
+    background: linear-gradient(to right, red, #ff8000, #ffff00, #007940, #4040ff, #a000c0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.section_2 button::before {
+    content: 'Paint';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    transition: .2s;
+    z-index: -1;
+    transform: translateY(10%) scale(1,0);
+    opacity: 0;
+    background: linear-gradient(to right, red, #ff8000, #ffff00, #007940, #4040ff, #a000c0);
+    -webkit-background-clip: text;
+    filter: blur(2px) url("#smudged");
+}
+.section_2 button:hover::before {
+    opacity: .8;
+    transform: translateY(27px) scale(1,-3);
+    transition: .1s ease-out;
+}
+

@@ -1,0 +1,46 @@
+<!------ HTML Document - CSS3 - Text Distortion Effects ------>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML - CSS3 - Text Distortion Effects</title>
+  <!-- Meta Data Tags -->
+    <meta charset="UTF-8"><!-- Unicode Character Encoding -->
+    <meta name="description" content="CSS3 - Text Distortion Effects">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Pierson Lippard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Responsive Viewport Background Tag -->
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Vast+Shadow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    
+    <!-- Your own stylesheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head><!-- HTML head end -->
+  <body>
+    <h1>Text Distortion Effects <br> CSS3</h1>
+    <div class="container"><p>Mouse Over Text</p>
+        <section class="section_1">
+            <button>Paint</button>
+        </section>
+        
+        <section class="section_2">
+            <button>Paint</button>
+        </section>
+    </div><!-- Div container end -->
+    <svg>
+      <filter id="smudged">
+        <feTurbulence numOctaves="2" seed="1" baseFrequency="0.02 0.05"/>
+        <feDisplacementMap scale="10" in="SourceGraphic" />
+      </filter>
+    </svg>
+
+      
+    <script src="script.js"></script><!-- JavaScript end -->
+
+  </body><!-- HTML body end -->
+</html>
